@@ -1,0 +1,9 @@
+{
+  "customManagers": [{
+    "customType": "regex",
+    "fileMatch": ["docker-compose.yml"],
+    "matchStrings": ["image: (?<depName>ghcr.io/hotio/.*):release-(?<currentValue>.*)"],
+    "extractVersion": "^release-(?<version>.*)$",
+    "datasourceTemplate": "docker"
+  }]
+}
